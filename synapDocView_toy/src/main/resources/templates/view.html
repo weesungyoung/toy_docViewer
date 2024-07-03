@@ -7,19 +7,37 @@
     <style>
         body {
             margin: 0;
-            overflow: auto;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
         }
         #pdf-container {
-            width: 100%;
-            height: 100%;
+            margin-top: 60px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .pdf-page {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            background-color: white;
         }
     </style>
 </head>
 <body>
-<h1>View PDF Document</h1>
+<div id="header">
+    <h1>PDF Document Viewer</h1>
+</div>
 <div id="pdf-container"></div>
 
 <script>
